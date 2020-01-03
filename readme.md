@@ -1,4 +1,4 @@
-Welcome to the Oblique Strategies API by MDN 2019
+Welcome to the Oblique Strategies API by MDN 2020
 
 Oblique Strategies was made in the 70s by Brian Eno and Peter Schmidt, to aide them in the processing of music, ideation, and decision making.
 A sort of random number generator, the parallel to divination systems like the Tarot or the I-Ching are evident.
@@ -23,11 +23,13 @@ A user can delete any post, if the user finds that post to be no longer inspirin
 
 "Why is this such an open API? Shouldn't you prevent users from deleting other users posts?"
 
-The design of this API follows the constraints of the mod 14 project, which prevents any user logins, or exclusive data to that user.
+The design of this API follows the constraints of a full-stack javascript project, which prevent any user logins, or exclusive data to that user.
 Instead of trying to find a workaround, as a designer, I'm making a system which will create a new idea. Everything can be deleted or edited,
 making the original idea, Oblique Strategies, a new data organism. I believe Brian Eno would approve of this.
 
-ORIGINAL SOURCE API (migrated to local API)
+Once completed, this project will be posted to the web as a unique url.
+
+ORIGINAL SOURCE API (migrated to local Rails API)
 
 monks.co
 OBLIQUE STRATEGIES API
