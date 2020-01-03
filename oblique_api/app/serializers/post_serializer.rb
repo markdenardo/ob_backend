@@ -1,3 +1,4 @@
 class PostSerializer < ActiveModel::Serializer
-  attributes :id, :link, :like, :integer
+  attributes :id, :url, :like, :note
+  # has_one :note
 end

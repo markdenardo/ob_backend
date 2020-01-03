@@ -1,4 +1,6 @@
 
+Post.destroy_all
+Note.destroy_all
 Card.destroy_all
 
 cards = [
@@ -30,7 +32,7 @@ cards = [
         "id": 5,
         "edition": 1,
         "cardnumber": 5,
-        "strategy": "Allow an easement (an easement is the abandonment of a stricture)"
+        "strategy": "Allow an easement (an easement is the abandonment of a structure)"
     },
     {
         "id": 6,
@@ -2801,5 +2803,17 @@ cards = [
 ]
 
 cards.each do |card|
-   Card.create card
+  Card.create card
 end
+
+# c1 = Card.create(id: 1, edition: 1, cardnumber: 1, strategy: "Abandon normal instruments")
+
+
+n1 = Note.create(comment:"Made a song with a kettle.", like:1, card_id: 1)
+n2 = Note.create(comment:"Made a song with a cat meow sample.", like:1, card_id: 1)
+
+p1 = Post.create(url: "https://soundcloud.com/markdenardo/waking-me-up", like:1, note_id: n1.id)
+p1 = Post.create(url: "https://soundcloud.com/markdenardo/bbb-game", like:1, note_id: n2.id)
+
+
+puts "seeded"

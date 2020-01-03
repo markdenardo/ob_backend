@@ -4,6 +4,7 @@ class CreateCards < ActiveRecord::Migration[6.0]
       t.integer :edition
       t.integer :cardnumber
       t.string :strategy
+      
 
       t.timestamps
     end

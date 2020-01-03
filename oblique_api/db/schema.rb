@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_31_005812) do
+ActiveRecord::Schema.define(version: 2019_12_31_234812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,18 +25,22 @@ ActiveRecord::Schema.define(version: 2019_12_31_005812) do
 
   create_table "notes", force: :cascade do |t|
     t.string "comment"
-    t.string "like"
-    t.string "integer"
+    t.integer "like"
+    t.bigint "card_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["card_id"], name: "index_notes_on_card_id"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "link"
-    t.string "like"
-    t.string "integer"
+    t.string "url"
+    t.integer "like"
+    t.bigint "note_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["note_id"], name: "index_posts_on_note_id"
   end
 
+  add_foreign_key "notes", "cards"
+  add_foreign_key "posts", "notes"
 end
