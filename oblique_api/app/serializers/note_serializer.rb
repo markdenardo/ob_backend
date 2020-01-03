@@ -1,4 +1,4 @@
-class NoteSerializer < ActiveModel::Serializer
-  attributes :id, :comment, :like, :card
-  # has_one :card
+class NoteSerializer
+  include FastJsonapi::ObjectSerializer
+  attributes :comment, :like, :post
 end

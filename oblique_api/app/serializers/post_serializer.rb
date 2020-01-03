@@ -1,4 +1,4 @@
-class PostSerializer < ActiveModel::Serializer
-  attributes :id, :url, :like, :note
-  # has_one :note
+class PostSerializer
+  include FastJsonapi::ObjectSerializer
+  attributes :url, :like
 end

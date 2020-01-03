@@ -1,4 +1,5 @@
-class CardSerializer < ActiveModel::Serializer
-  attributes :id, :edition, :cardnumber, :strategy
-  # has_many :notes
+class CardSerializer
+  include FastJsonapi::ObjectSerializer
+  attributes :edition, :cardnumber, :strategy, :notes, :posts
+
 end
