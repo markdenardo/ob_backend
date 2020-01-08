@@ -1,4 +1,4 @@
 class NoteSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :comment, :like, :post
+  attributes :id, :comment, :like, :card_id
 end

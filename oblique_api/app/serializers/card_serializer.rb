@@ -1,5 +1,7 @@
 class CardSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :edition, :cardnumber, :strategy, :notes, :posts
+  attributes :id, :edition, :cardnumber, :strategy, :notes, :posts
 
 end
+
+#card-<note-<post
